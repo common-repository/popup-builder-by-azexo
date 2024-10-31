@@ -1,0 +1,86 @@
+.azh-popupType {
+    &[data-value="none"], &[data-value="exit"], &:not([data-value]) {
+        ~ .azh-delayTime, ~ .azh-scrollTopDistance {
+            display: none; 
+        }
+    }
+    &[data-value="delayed"] {
+        ~ .azh-scrollTopDistance {
+            display: none; 
+        }
+    }
+    &[data-value="scrolled"] {
+        ~ .azh-delayTime {
+            display: none; 
+        }
+    }
+}
+
+.azh-autoClose {
+    &[data-value="false"] {
+        ~ .azh-autoCloseDelay {
+            display: none; 
+        }
+    }
+}
+
+.azh-setCookie {
+    &[data-value="false"] {
+        ~ .azh-control {
+            display: none; 
+        }
+    }
+}
+
+.azh-overlayVisible {
+    &[data-value="false"] {
+        ~ .azh-control {
+            display: none; 
+        }
+    }
+}
+
+.azh-pageAnimationEffect {
+    ~ .azh-control {
+        display: none; 
+    }
+    &[data-value="scale"] {
+        ~ .azh-pageAnimationDuration, ~ .azh-pageScaleValue {
+            display: block; 
+        }
+    }
+    &[data-value="blur"] {
+        ~ .azh-pageAnimationDuration, ~ .azh-pageBlurRadius {
+            display: block; 
+        }
+    }
+    &[data-value="moveUp"], &[data-value="moveDown"], &[data-value="moveLeft"], &[data-value="moveRight"] {
+        ~ .azh-pageAnimationDuration, ~ .azh-pageMoveDistance {
+            display: block; 
+        }
+    }
+}
+
+.azh-contentAnimation {
+    &[data-value="false"] {
+        ~ .azh-control {
+            display: none; 
+        }
+    }
+}
+
+.azh-addCloseButton {
+    &[data-value="false"] {
+        ~ .azh-buttonStyle {
+            display: none; 
+        }
+    }
+}
+
+.azh-showOnMobile {
+    &[data-value="false"] {
+        ~ .azh-control {
+            display: none; 
+        }
+    }
+}
